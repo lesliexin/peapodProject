@@ -1,3 +1,15 @@
+'''
+title           : app.py
+
+description     : The following code creates a Flask web server. This allows 
+
+author          :
+
+date            : August 2016
+
+python version  :2.7.12  
+=============================================================================='''
+
 from flask import Flask, request, render_template
 import MySQLdb
 from datetime import datetime
