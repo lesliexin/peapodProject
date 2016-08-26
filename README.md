@@ -59,5 +59,6 @@ INSTALL PHP
 
 -------------------------------------------------------------------------------------------------------------------------------
 INSTALL FLASK
+
 1. Installation for Python 2
     - dnf install python-flask
