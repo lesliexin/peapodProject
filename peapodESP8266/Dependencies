@@ -1,5 +1,0 @@
-Libraries Needed:
--ArduinoJSON (can be downloaded using the Arduino library manager)
--ESP8266WiFi (automatically installed after the Arduino environment has been setup for the ESP8266)
--ESP8266WifiMulti (automatically installed after the Arduino environment has been setup for the ESP8266)
--ESP8266HTTPClient (automatically installed after the Arduino environment has been setup for the ESP8266)
