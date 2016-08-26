@@ -43,14 +43,14 @@ INSTALL PHP
 3. Install phpMyAdmin
     - dnf install phpmyadmin -y
 4. Configure phpMyAdmin
-    a. Edit Apache Virtual Host File
+    - Edit Apache Virtual Host File
         - vim /etc/httpd/conf.d/phpMyAdmin.conf
-    b. Change the following 4 instances of “127.0.0.1” to your IP address in the file 
+    - Change the following 4 instances of “127.0.0.1” to your IP address in the file 
         - Require ip 127.0.0.1
         - Allow from 127.0.0.1
         - Require ip 127.0.0.1
         - Allow from 127.0.0.1
-    c. Save and exit 
+    - Save and exit 
         - :wq
 5. Restart Apache
     - systemctl restart httpd
