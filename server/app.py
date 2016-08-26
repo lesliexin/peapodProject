@@ -13,7 +13,7 @@ date            : August 2016
 python version  : 2.7.12  
 =============================================================================='''
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import MySQLdb
 from datetime import datetime
 import MySQLdb
@@ -40,14 +40,17 @@ print "Compile time: ", time
 def hello():
 	return render_template('echoform3.php')
 
-# Querying data from database
+# Route inserts the data into the MySQL database 
+# Then the queried data is displayed in the web page in json format
 @app.route("/echo", methods=['GET','POST'])
 def echo():
 	input_ = request.form['values']
+	data = jsonify(data=cursor.fetchall())
 	cursor.execute("INSERT INTO peapod (Time, MAC_Address, Signal_Strength) VALUES (%s,%s,%s)", (time, input_, time))
 	db.commit()
-	return render_template('echo3.php')
+	return data
 
+# Allows the server to be externally visible
 if __name__ == "__main__":
 	app.run(host= '0.0.0.0')
 
