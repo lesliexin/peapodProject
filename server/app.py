@@ -2,7 +2,7 @@
 title           : app.py
 
 description     : The following code creates a Flask web server which
-                  handles POST requests sent by the PHP form in the 
+                  handles POST requests sent by the HTML form in the 
                   first route ('/'). The second route ('/echo') then  
                   commits the data to a MySQL database. 
 
@@ -38,7 +38,7 @@ print "Compile time: ", time
 # Route returns a form which sends a POST request using user input
 @app.route("/")
 def hello():
-	return render_template('echoform3.php')
+	return render_template('form.html')
 
 # Route inserts the data into the MySQL database 
 # Then the queried data is displayed in the web page in json format
