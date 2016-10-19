@@ -22,11 +22,11 @@ import MySQLdb
 app = Flask(__name__)
 
 # Connecting to MySQL database
-db = MySQLdb.connect("localhost","root","lxin2016","test")
+db = MySQLdb.connect("localhost","root",(password),(db_name))
 cursor = db.cursor()
 
 # Selecting table
-sql = "SELECT * FROM peapod"
+sql = "SELECT * FROM (table name)"
 cursor.execute(sql)
 
 # Finding the real time using python's datetime library
